@@ -1,4 +1,4 @@
-package ejemplo.clase2;
+package ejemplo.clase2TM;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

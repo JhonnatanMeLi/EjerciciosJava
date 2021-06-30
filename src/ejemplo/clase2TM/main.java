@@ -1,4 +1,4 @@
-package ejemplo.clase2;
+package ejemplo.clase2TM;
 
 public class main {
 
