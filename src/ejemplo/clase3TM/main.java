@@ -55,6 +55,8 @@ public class main {
         for (Celular celular: celulares) {
             System.out.println(celular.toString());
         }
+
+
     }
 
 }
