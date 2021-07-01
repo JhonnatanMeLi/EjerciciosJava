@@ -16,6 +16,8 @@ public class main {
                 +" tiene un puntaje de "+x.calcularPuntaje()));
         System.out.println("------------------------------");
         carrera.definirGanador();
+        System.out.println("------------------------------");
+        carrera.socorrerAuto("ABC984");
         /*
         carrera.eliminarVehiculoConPatente("RRR123");
         carrera.getListaVehiculos().forEach(x-> System.out.println(x.toString()));

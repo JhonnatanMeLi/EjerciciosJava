@@ -11,6 +11,8 @@ public class Carrera {
     private String nombre;
     private int cantidadVehiculosPermitidos;
     private List<Vehiculo> listaVehiculos;
+    private SocorristaAuto socorristaAuto;
+    private SocorristaMoto socorristaMoto;
 
     public Carrera() {
         this.listaVehiculos = new ArrayList<>();
@@ -61,6 +63,23 @@ public class Carrera {
         System.out.println("El ganador del dacker para la carrera "+this.nombre+" es el vehiculo con patente "
             + this.listaVehiculos.get(0).getPatente());
     }
+
+    public void socorrerAuto(String patente) {
+        this.socorristaAuto = new SocorristaAuto();
+        List<Vehiculo> vehiculosFiltrados = this.listaVehiculos.stream()
+                .filter(x -> x.getPatente().equals(patente)).collect(Collectors.toList());
+        if (vehiculosFiltrados.size() > 0)
+            this.socorristaAuto.socorrer((Auto) vehiculosFiltrados.get(0));
+    }
+
+    public void socorrerMoto(String patente) {
+        this.socorristaMoto = new SocorristaMoto();
+        List<Vehiculo> vehiculosFiltrados = this.listaVehiculos.stream()
+                .filter(x -> x.getPatente().equals(patente)).collect(Collectors.toList());
+        if (vehiculosFiltrados.size() > 0)
+            this.socorristaMoto.socorrer((Moto) vehiculosFiltrados.get(0));
+    }
+
 
     public List<Vehiculo> getListaVehiculos() {
         return listaVehiculos;
