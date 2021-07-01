@@ -26,7 +26,7 @@ public class main {
         int tamanio = 100000;
         Integer numeros[] = new Integer[tamanio];
         for (int i = tamanio; i > 0; i--)
-            numeros[i-1]=i;
+            numeros[tamanio-i]=i;
         System.out.println("Genera arreglo de numeros y empieza cuenta");
         time.start();
         Comparator<Integer> test = Comparator.comparingInt(o -> o);
